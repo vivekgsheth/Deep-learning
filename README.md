@@ -89,4 +89,13 @@ Importantly, the (re-)discovery and adoption of the rectified linear activation 
 Source : https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/
 
 
+## fit 
 
+from keras.callbacks import EarlyStopping
+#set early stopping monitor so the model stops training when it won't improve anymore
+early_stopping_monitor = EarlyStopping(patience=3)
+#train model
+model.fit(train_X, train_y, validation_split=0.2, epochs=30, callbacks=[early_stopping_monitor])
+
+The number of epochs is the number of times the model will cycle through the data. The more epochs we run, the more the model will improve, up to a certain point. After that point, the model will stop improving during each epoch. In addition, the more epochs, the longer the model will take to run. To monitor this, we will use ‘early stopping’.
+Early stopping will stop the model from training before the number of epochs is reached if the model stops improving. We will set our early stopping monitor to 3. This means that after 3 epochs in a row in which the model doesn’t improve, training will stop. Sometimes, the validation loss can stop improving then improve in the next epoch, but after 3 epochs in which the validation loss doesn’t improve, it usually won’t improve again.
