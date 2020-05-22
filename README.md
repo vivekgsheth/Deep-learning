@@ -5,6 +5,11 @@
 1. The sigmoid and hyperbolic tangent activation functions cannot be used in networks with many layers due to the vanishing gradient problem.
 2. The rectified linear activation function overcomes the vanishing gradient problem, allowing models to learn faster and perform better
 3. The rectified linear activation is the default activation when developing multilayer Perceptron and convolutional neural networks.
+4. Traditionally, LSTMs use the tanh activation function for the activation of the cell state and the sigmoid activation function for the node output. Given their careful design, ReLU were thought to not be appropriate for Recurrent Neural Networks (RNNs) such as the Long Short-Term Memory Network (LSTM) by default
+5. The Leaky ReLU (LReLU or LReL) modifies the function to allow small negative values when the input is less than zero.
+6. The Exponential Linear Unit, or ELU, is a generalization of the ReLU that uses a parameterized exponential function to transition from the positive to small negative values
+7. The Parametric ReLU, or PReLU, learns parameters that control the shape and leaky-ness of the function.
+
 
 ## Basics
 
