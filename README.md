@@ -91,6 +91,9 @@ Source : https://machinelearningmastery.com/rectified-linear-activation-function
 
 ## fit 
 
+To train, we will use the ‘fit()’ function on our model with the following five parameters: training data (train_X), target data (train_y), validation split, the number of epochs and callbacks.
+
+
 from keras.callbacks import EarlyStopping
 #set early stopping monitor so the model stops training when it won't improve anymore
 early_stopping_monitor = EarlyStopping(patience=3)
