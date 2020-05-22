@@ -95,9 +95,9 @@ To train, we will use the ‘fit()’ function on our model with the following f
 
 
 from keras.callbacks import EarlyStopping <br/>
-#set early stopping monitor so the model stops training when it won't improve anymore
-early_stopping_monitor = EarlyStopping(patience=3)
-#train model
+#set early stopping monitor so the model stops training when it won't improve anymore <br/>
+early_stopping_monitor = EarlyStopping(patience=3)<br/>
+#train model <br/>
 model.fit(train_X, train_y, validation_split=0.2, epochs=30, callbacks=[early_stopping_monitor])
 
 The number of epochs is the number of times the model will cycle through the data. The more epochs we run, the more the model will improve, up to a certain point. After that point, the model will stop improving during each epoch. In addition, the more epochs, the longer the model will take to run. To monitor this, we will use ‘early stopping’.
