@@ -20,5 +20,9 @@ Nonlinear activation functions are preferred as they allow the nodes to learn mo
 
 The sigmoid activation function, also called the **logistic function**, is traditionally a very popular activation function for neural networks. The input to the function is transformed into a value between 0.0 and 1.0. Inputs that are much larger than 1.0 are transformed to the value 1.0, similarly, values much smaller than 0.0 are snapped to 0.0. The shape of the function for all possible inputs is an S-shape from zero up through 0.5 to 1.0. For a long time, through the early 1990s, it was the default activation used on neural networks
 
+## Tanh Function
+
+The **hyperbolic tangent function**, or tanh for short, is a similar shaped nonlinear activation function that outputs values between -1.0 and 1.0. In the later 1990s and through the 2000s, the tanh function was preferred over the sigmoid activation function as models that used it were easier to train and often had better predictive performance.
+
 ## Limitations of Sigmoid and Tanh Activation Functions
 
